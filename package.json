@@ -1,0 +1,36 @@
+{
+  "name": "notioner",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -cw",
+    "prepack": "yarn run build",
+    "prepublishOnly": "yarn run build"
+  },
+  "dependencies": {
+    "notion-client": "^2.5.0",
+    "notion-types": "^2.5.0",
+    "notion-utils": "^2.5.1"
+  },
+  "devDependencies": {
+    "@cprecioso/tsconfig": "^1.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@types/node": "^14.11.8",
+    "@wessberg/rollup-plugin-ts": "^1.3.5",
+    "rollup": "^2.30.0",
+    "typescript": "^3.9"
+  }
+}
